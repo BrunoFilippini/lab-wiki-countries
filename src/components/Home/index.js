@@ -1,9 +1,6 @@
-import styles from './styles.module.css'
-
 import { Navbar } from '../Navbar'
 import { CountriesList } from '../CountriesList'
-import { CountryDetails } from '../CountryDetails'
-
+import { CountriesDetails } from '../CountriesDetails'
 
 export function Home() {
     return (
@@ -15,21 +12,9 @@ export function Home() {
             
                 <div className="row">
 
-                    <div className={`col-5 ${styles.conteriesScroll}`}>
-                    
-                        <div className="list-group">
+                    {<CountriesList />}
 
-                            {<CountriesList />}
-
-                        </div>
-
-                    </div>
-
-                    <div className="col-7">
-
-                        {<CountryDetails />}
-
-                    </div>
+                    {<CountriesDetails />}
 
                 </div>
 
